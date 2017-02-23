@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E0285881E57F29C0075A054 /* IRDBookDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0285871E57F29C0075A054 /* IRDBookDetailViewModel.swift */; };
+		0E02858A1E57F8C70075A054 /* IRDAddBookProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0285891E57F8C70075A054 /* IRDAddBookProgressViewModel.swift */; };
+		0E02858C1E57F8D60075A054 /* IRDAddBookProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E02858B1E57F8D60075A054 /* IRDAddBookProgressViewController.swift */; };
+		0E34A8D71E5D17DF00EE54C7 /* IRDProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34A8D61E5D17DF00EE54C7 /* IRDProgress.swift */; };
+		0E360D011E4745C40006C06D /* IRDNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E360D001E4745C40006C06D /* IRDNetwork.swift */; };
+		0E72253E1E501A3D00DE103A /* IRDBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72253D1E501A3D00DE103A /* IRDBaseModel.swift */; };
+		0E7225421E501DA600DE103A /* IRDBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7225401E501DA600DE103A /* IRDBook.swift */; };
+		0E7225431E501DA600DE103A /* IRDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7225411E501DA600DE103A /* IRDUser.swift */; };
+		0E7225451E50426500DE103A /* IRDBookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7225441E50426500DE103A /* IRDBookModel.swift */; };
+		0E7225471E50431000DE103A /* IRDEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7225461E50431000DE103A /* IRDEnvironment.swift */; };
+		0EB144BD1E45FD3300FA52E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144BC1E45FD3300FA52E8 /* AppDelegate.swift */; };
+		0EB144C61E45FD3300FA52E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB144C51E45FD3300FA52E8 /* Assets.xcassets */; };
+		0EB144C91E45FD3300FA52E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB144C71E45FD3300FA52E8 /* LaunchScreen.storyboard */; };
+		0EB144D41E45FD3300FA52E8 /* ireadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144D31E45FD3300FA52E8 /* ireadTests.swift */; };
+		0EB144DF1E45FD3300FA52E8 /* ireadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144DE1E45FD3300FA52E8 /* ireadUITests.swift */; };
+		0EEC71501E55FA19006082C9 /* IRDBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714B1E55FA19006082C9 /* IRDBookDetailViewController.swift */; };
+		0EEC71511E55FA19006082C9 /* IRDBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714C1E55FA19006082C9 /* IRDBookListViewController.swift */; };
+		0EEC71521E55FA19006082C9 /* IRDBookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714D1E55FA19006082C9 /* IRDBookListViewModel.swift */; };
+		0EEC71531E55FA19006082C9 /* IRDTaskListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714F1E55FA19006082C9 /* IRDTaskListViewController.swift */; };
+		0EEC71551E55FA8A006082C9 /* IRDAddBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC71541E55FA8A006082C9 /* IRDAddBookViewController.swift */; };
+		0EEC71571E55FA9A006082C9 /* IRDAddBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC71561E55FA9A006082C9 /* IRDAddBookViewModel.swift */; };
+		0EEC71591E55FBFB006082C9 /* IRDUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC71581E55FBFB006082C9 /* IRDUIKit.swift */; };
+		0EFE46651E5DD96F0028446E /* IRDTaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE46641E5DD96F0028446E /* IRDTaskListViewModel.swift */; };
+		0EFE46671E5DD9830028446E /* IRDTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE46661E5DD9830028446E /* IRDTaskModel.swift */; };
+		0EFE46691E5DDB280028446E /* IRDTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE46681E5DDB280028446E /* IRDTask.swift */; };
+		FB02A451D1B460967097284D /* Pods_iread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD785551492134B2DDA5E2DD /* Pods_iread.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EB144D01E45FD3300FA52E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EB144B11E45FD3300FA52E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EB144B81E45FD3300FA52E8;
+			remoteInfo = iread;
+		};
+		0EB144DB1E45FD3300FA52E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EB144B11E45FD3300FA52E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EB144B81E45FD3300FA52E8;
+			remoteInfo = iread;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E0285871E57F29C0075A054 /* IRDBookDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookDetailViewModel.swift; sourceTree = "<group>"; };
+		0E0285891E57F8C70075A054 /* IRDAddBookProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDAddBookProgressViewModel.swift; sourceTree = "<group>"; };
+		0E02858B1E57F8D60075A054 /* IRDAddBookProgressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDAddBookProgressViewController.swift; sourceTree = "<group>"; };
+		0E34A8D61E5D17DF00EE54C7 /* IRDProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDProgress.swift; sourceTree = "<group>"; };
+		0E360D001E4745C40006C06D /* IRDNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDNetwork.swift; sourceTree = "<group>"; };
+		0E72253D1E501A3D00DE103A /* IRDBaseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBaseModel.swift; sourceTree = "<group>"; };
+		0E7225401E501DA600DE103A /* IRDBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBook.swift; sourceTree = "<group>"; };
+		0E7225411E501DA600DE103A /* IRDUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDUser.swift; sourceTree = "<group>"; };
+		0E7225441E50426500DE103A /* IRDBookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookModel.swift; sourceTree = "<group>"; };
+		0E7225461E50431000DE103A /* IRDEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDEnvironment.swift; sourceTree = "<group>"; };
+		0EB144B91E45FD3300FA52E8 /* iread.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iread.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB144BC1E45FD3300FA52E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0EB144C51E45FD3300FA52E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0EB144C81E45FD3300FA52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0EB144CA1E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ireadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB144D31E45FD3300FA52E8 /* ireadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ireadTests.swift; sourceTree = "<group>"; };
+		0EB144D51E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ireadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EB144DE1E45FD3300FA52E8 /* ireadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ireadUITests.swift; sourceTree = "<group>"; };
+		0EB144E01E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EEC714B1E55FA19006082C9 /* IRDBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookDetailViewController.swift; sourceTree = "<group>"; };
+		0EEC714C1E55FA19006082C9 /* IRDBookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookListViewController.swift; sourceTree = "<group>"; };
+		0EEC714D1E55FA19006082C9 /* IRDBookListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookListViewModel.swift; sourceTree = "<group>"; };
+		0EEC714F1E55FA19006082C9 /* IRDTaskListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDTaskListViewController.swift; sourceTree = "<group>"; };
+		0EEC71541E55FA8A006082C9 /* IRDAddBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDAddBookViewController.swift; sourceTree = "<group>"; };
+		0EEC71561E55FA9A006082C9 /* IRDAddBookViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDAddBookViewModel.swift; sourceTree = "<group>"; };
+		0EEC71581E55FBFB006082C9 /* IRDUIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDUIKit.swift; sourceTree = "<group>"; };
+		0EFE46641E5DD96F0028446E /* IRDTaskListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDTaskListViewModel.swift; sourceTree = "<group>"; };
+		0EFE46661E5DD9830028446E /* IRDTaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDTaskModel.swift; sourceTree = "<group>"; };
+		0EFE46681E5DDB280028446E /* IRDTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDTask.swift; sourceTree = "<group>"; };
+		75A691ED88218620C00AC625 /* Pods-iread.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iread.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iread/Pods-iread.debug.xcconfig"; sourceTree = "<group>"; };
+		838FE57F5B2EDE4A81318F4C /* Pods-iread.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iread.release.xcconfig"; path = "Pods/Target Support Files/Pods-iread/Pods-iread.release.xcconfig"; sourceTree = "<group>"; };
+		FD785551492134B2DDA5E2DD /* Pods_iread.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iread.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0EB144B61E45FD3300FA52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB02A451D1B460967097284D /* Pods_iread.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144CC1E45FD3300FA52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144D71E45FD3300FA52E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E72253F1E501D8400DE103A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				0E7225411E501DA600DE103A /* IRDUser.swift */,
+				0E7225401E501DA600DE103A /* IRDBook.swift */,
+				0E34A8D61E5D17DF00EE54C7 /* IRDProgress.swift */,
+				0EFE46681E5DDB280028446E /* IRDTask.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		0EB144B01E45FD3300FA52E8 = {
+			isa = PBXGroup;
+			children = (
+				0EB144BB1E45FD3300FA52E8 /* iread */,
+				0EB144D21E45FD3300FA52E8 /* ireadTests */,
+				0EB144DD1E45FD3300FA52E8 /* ireadUITests */,
+				0EB144BA1E45FD3300FA52E8 /* Products */,
+				FBACDBB049BB57501F6CED05 /* Pods */,
+				BCCDC6C56CE9438B75785CC2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0EB144BA1E45FD3300FA52E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0EB144B91E45FD3300FA52E8 /* iread.app */,
+				0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */,
+				0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0EB144BB1E45FD3300FA52E8 /* iread */ = {
+			isa = PBXGroup;
+			children = (
+				0E72253F1E501D8400DE103A /* Domain */,
+				0EB144FB1E46113B00FA52E8 /* Model */,
+				0EB144FA1E46112B00FA52E8 /* View */,
+				0EB144F91E4610EE00FA52E8 /* Controller */,
+				0EB144F81E4610A500FA52E8 /* Utility */,
+				0EB144BC1E45FD3300FA52E8 /* AppDelegate.swift */,
+				0EB144C51E45FD3300FA52E8 /* Assets.xcassets */,
+				0EB144C71E45FD3300FA52E8 /* LaunchScreen.storyboard */,
+				0EB144CA1E45FD3300FA52E8 /* Info.plist */,
+			);
+			path = iread;
+			sourceTree = "<group>";
+		};
+		0EB144D21E45FD3300FA52E8 /* ireadTests */ = {
+			isa = PBXGroup;
+			children = (
+				0EB144D31E45FD3300FA52E8 /* ireadTests.swift */,
+				0EB144D51E45FD3300FA52E8 /* Info.plist */,
+			);
+			path = ireadTests;
+			sourceTree = "<group>";
+		};
+		0EB144DD1E45FD3300FA52E8 /* ireadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0EB144DE1E45FD3300FA52E8 /* ireadUITests.swift */,
+				0EB144E01E45FD3300FA52E8 /* Info.plist */,
+			);
+			path = ireadUITests;
+			sourceTree = "<group>";
+		};
+		0EB144F81E4610A500FA52E8 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				0E360D001E4745C40006C06D /* IRDNetwork.swift */,
+				0E7225461E50431000DE103A /* IRDEnvironment.swift */,
+				0EEC71581E55FBFB006082C9 /* IRDUIKit.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		0EB144F91E4610EE00FA52E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EEC714A1E55FA19006082C9 /* Book */,
+				0EEC714E1E55FA19006082C9 /* Task */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0EB144FA1E46112B00FA52E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EB144FB1E46113B00FA52E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E72253D1E501A3D00DE103A /* IRDBaseModel.swift */,
+				0E7225441E50426500DE103A /* IRDBookModel.swift */,
+				0EFE46661E5DD9830028446E /* IRDTaskModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0EEC714A1E55FA19006082C9 /* Book */ = {
+			isa = PBXGroup;
+			children = (
+				0E0285871E57F29C0075A054 /* IRDBookDetailViewModel.swift */,
+				0EEC714B1E55FA19006082C9 /* IRDBookDetailViewController.swift */,
+				0EEC714D1E55FA19006082C9 /* IRDBookListViewModel.swift */,
+				0EEC714C1E55FA19006082C9 /* IRDBookListViewController.swift */,
+				0EEC71561E55FA9A006082C9 /* IRDAddBookViewModel.swift */,
+				0EEC71541E55FA8A006082C9 /* IRDAddBookViewController.swift */,
+				0E0285891E57F8C70075A054 /* IRDAddBookProgressViewModel.swift */,
+				0E02858B1E57F8D60075A054 /* IRDAddBookProgressViewController.swift */,
+			);
+			path = Book;
+			sourceTree = "<group>";
+		};
+		0EEC714E1E55FA19006082C9 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				0EFE46641E5DD96F0028446E /* IRDTaskListViewModel.swift */,
+				0EEC714F1E55FA19006082C9 /* IRDTaskListViewController.swift */,
+			);
+			path = Task;
+			sourceTree = "<group>";
+		};
+		BCCDC6C56CE9438B75785CC2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD785551492134B2DDA5E2DD /* Pods_iread.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBACDBB049BB57501F6CED05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75A691ED88218620C00AC625 /* Pods-iread.debug.xcconfig */,
+				838FE57F5B2EDE4A81318F4C /* Pods-iread.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0EB144B81E45FD3300FA52E8 /* iread */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB144E31E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "iread" */;
+			buildPhases = (
+				7F2AE5CE7A257EAE63E8D0FA /* [CP] Check Pods Manifest.lock */,
+				0EB144B51E45FD3300FA52E8 /* Sources */,
+				0EB144B61E45FD3300FA52E8 /* Frameworks */,
+				0EB144B71E45FD3300FA52E8 /* Resources */,
+				7640F0F960534265C80D6367 /* [CP] Embed Pods Frameworks */,
+				4E5C544C57B0B0882996D237 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iread;
+			productName = iread;
+			productReference = 0EB144B91E45FD3300FA52E8 /* iread.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0EB144CE1E45FD3300FA52E8 /* ireadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB144E61E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadTests" */;
+			buildPhases = (
+				0EB144CB1E45FD3300FA52E8 /* Sources */,
+				0EB144CC1E45FD3300FA52E8 /* Frameworks */,
+				0EB144CD1E45FD3300FA52E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EB144D11E45FD3300FA52E8 /* PBXTargetDependency */,
+			);
+			name = ireadTests;
+			productName = ireadTests;
+			productReference = 0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0EB144D91E45FD3300FA52E8 /* ireadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EB144E91E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadUITests" */;
+			buildPhases = (
+				0EB144D61E45FD3300FA52E8 /* Sources */,
+				0EB144D71E45FD3300FA52E8 /* Frameworks */,
+				0EB144D81E45FD3300FA52E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0EB144DC1E45FD3300FA52E8 /* PBXTargetDependency */,
+			);
+			name = ireadUITests;
+			productName = ireadUITests;
+			productReference = 0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0EB144B11E45FD3300FA52E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = cc;
+				TargetAttributes = {
+					0EB144B81E45FD3300FA52E8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EN86GVBDG6;
+						ProvisioningStyle = Automatic;
+					};
+					0EB144CE1E45FD3300FA52E8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EN86GVBDG6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0EB144B81E45FD3300FA52E8;
+					};
+					0EB144D91E45FD3300FA52E8 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = EN86GVBDG6;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0EB144B81E45FD3300FA52E8;
+					};
+				};
+			};
+			buildConfigurationList = 0EB144B41E45FD3300FA52E8 /* Build configuration list for PBXProject "iread" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0EB144B01E45FD3300FA52E8;
+			productRefGroup = 0EB144BA1E45FD3300FA52E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0EB144B81E45FD3300FA52E8 /* iread */,
+				0EB144CE1E45FD3300FA52E8 /* ireadTests */,
+				0EB144D91E45FD3300FA52E8 /* ireadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0EB144B71E45FD3300FA52E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB144C91E45FD3300FA52E8 /* LaunchScreen.storyboard in Resources */,
+				0EB144C61E45FD3300FA52E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144CD1E45FD3300FA52E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144D81E45FD3300FA52E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4E5C544C57B0B0882996D237 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iread/Pods-iread-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7640F0F960534265C80D6367 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iread/Pods-iread-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F2AE5CE7A257EAE63E8D0FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0EB144B51E45FD3300FA52E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E34A8D71E5D17DF00EE54C7 /* IRDProgress.swift in Sources */,
+				0E02858A1E57F8C70075A054 /* IRDAddBookProgressViewModel.swift in Sources */,
+				0EEC71591E55FBFB006082C9 /* IRDUIKit.swift in Sources */,
+				0EEC71501E55FA19006082C9 /* IRDBookDetailViewController.swift in Sources */,
+				0EEC71531E55FA19006082C9 /* IRDTaskListViewController.swift in Sources */,
+				0E7225471E50431000DE103A /* IRDEnvironment.swift in Sources */,
+				0EB144BD1E45FD3300FA52E8 /* AppDelegate.swift in Sources */,
+				0E02858C1E57F8D60075A054 /* IRDAddBookProgressViewController.swift in Sources */,
+				0EFE46671E5DD9830028446E /* IRDTaskModel.swift in Sources */,
+				0E72253E1E501A3D00DE103A /* IRDBaseModel.swift in Sources */,
+				0E7225451E50426500DE103A /* IRDBookModel.swift in Sources */,
+				0E7225421E501DA600DE103A /* IRDBook.swift in Sources */,
+				0E7225431E501DA600DE103A /* IRDUser.swift in Sources */,
+				0EEC71571E55FA9A006082C9 /* IRDAddBookViewModel.swift in Sources */,
+				0E0285881E57F29C0075A054 /* IRDBookDetailViewModel.swift in Sources */,
+				0EEC71521E55FA19006082C9 /* IRDBookListViewModel.swift in Sources */,
+				0E360D011E4745C40006C06D /* IRDNetwork.swift in Sources */,
+				0EFE46651E5DD96F0028446E /* IRDTaskListViewModel.swift in Sources */,
+				0EEC71511E55FA19006082C9 /* IRDBookListViewController.swift in Sources */,
+				0EFE46691E5DDB280028446E /* IRDTask.swift in Sources */,
+				0EEC71551E55FA8A006082C9 /* IRDAddBookViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144CB1E45FD3300FA52E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB144D41E45FD3300FA52E8 /* ireadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EB144D61E45FD3300FA52E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EB144DF1E45FD3300FA52E8 /* ireadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EB144D11E45FD3300FA52E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EB144B81E45FD3300FA52E8 /* iread */;
+			targetProxy = 0EB144D01E45FD3300FA52E8 /* PBXContainerItemProxy */;
+		};
+		0EB144DC1E45FD3300FA52E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EB144B81E45FD3300FA52E8 /* iread */;
+			targetProxy = 0EB144DB1E45FD3300FA52E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0EB144C71E45FD3300FA52E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0EB144C81E45FD3300FA52E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0EB144E11E45FD3300FA52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EB144E21E45FD3300FA52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0EB144E41E45FD3300FA52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75A691ED88218620C00AC625 /* Pods-iread.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = iread/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.iread;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0EB144E51E45FD3300FA52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 838FE57F5B2EDE4A81318F4C /* Pods-iread.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = iread/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.iread;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		0EB144E71E45FD3300FA52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = ireadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iread.app/iread";
+			};
+			name = Debug;
+		};
+		0EB144E81E45FD3300FA52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = ireadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iread.app/iread";
+			};
+			name = Release;
+		};
+		0EB144EA1E45FD3300FA52E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = ireadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = iread;
+			};
+			name = Debug;
+		};
+		0EB144EB1E45FD3300FA52E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = EN86GVBDG6;
+				INFOPLIST_FILE = ireadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = iread;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0EB144B41E45FD3300FA52E8 /* Build configuration list for PBXProject "iread" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB144E11E45FD3300FA52E8 /* Debug */,
+				0EB144E21E45FD3300FA52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EB144E31E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "iread" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB144E41E45FD3300FA52E8 /* Debug */,
+				0EB144E51E45FD3300FA52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EB144E61E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB144E71E45FD3300FA52E8 /* Debug */,
+				0EB144E81E45FD3300FA52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EB144E91E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EB144EA1E45FD3300FA52E8 /* Debug */,
+				0EB144EB1E45FD3300FA52E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0EB144B11E45FD3300FA52E8 /* Project object */;
+}
