@@ -20,8 +20,6 @@
 		0EB144BD1E45FD3300FA52E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144BC1E45FD3300FA52E8 /* AppDelegate.swift */; };
 		0EB144C61E45FD3300FA52E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EB144C51E45FD3300FA52E8 /* Assets.xcassets */; };
 		0EB144C91E45FD3300FA52E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EB144C71E45FD3300FA52E8 /* LaunchScreen.storyboard */; };
-		0EB144D41E45FD3300FA52E8 /* ireadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144D31E45FD3300FA52E8 /* ireadTests.swift */; };
-		0EB144DF1E45FD3300FA52E8 /* ireadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB144DE1E45FD3300FA52E8 /* ireadUITests.swift */; };
 		0EEC71501E55FA19006082C9 /* IRDBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714B1E55FA19006082C9 /* IRDBookDetailViewController.swift */; };
 		0EEC71511E55FA19006082C9 /* IRDBookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714C1E55FA19006082C9 /* IRDBookListViewController.swift */; };
 		0EEC71521E55FA19006082C9 /* IRDBookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEC714D1E55FA19006082C9 /* IRDBookListViewModel.swift */; };
@@ -34,23 +32,6 @@
 		0EFE46691E5DDB280028446E /* IRDTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFE46681E5DDB280028446E /* IRDTask.swift */; };
 		FB02A451D1B460967097284D /* Pods_iread.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD785551492134B2DDA5E2DD /* Pods_iread.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		0EB144D01E45FD3300FA52E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0EB144B11E45FD3300FA52E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EB144B81E45FD3300FA52E8;
-			remoteInfo = iread;
-		};
-		0EB144DB1E45FD3300FA52E8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0EB144B11E45FD3300FA52E8 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0EB144B81E45FD3300FA52E8;
-			remoteInfo = iread;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0E0285871E57F29C0075A054 /* IRDBookDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookDetailViewModel.swift; sourceTree = "<group>"; };
@@ -68,10 +49,8 @@
 		0EB144C51E45FD3300FA52E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EB144C81E45FD3300FA52E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EB144CA1E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ireadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB144D31E45FD3300FA52E8 /* ireadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ireadTests.swift; sourceTree = "<group>"; };
 		0EB144D51E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ireadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB144DE1E45FD3300FA52E8 /* ireadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ireadUITests.swift; sourceTree = "<group>"; };
 		0EB144E01E45FD3300FA52E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EEC714B1E55FA19006082C9 /* IRDBookDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRDBookDetailViewController.swift; sourceTree = "<group>"; };
@@ -95,20 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB02A451D1B460967097284D /* Pods_iread.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EB144CC1E45FD3300FA52E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EB144D71E45FD3300FA52E8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				0EB144B91E45FD3300FA52E8 /* iread.app */,
-				0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */,
-				0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -282,42 +245,6 @@
 			productReference = 0EB144B91E45FD3300FA52E8 /* iread.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EB144CE1E45FD3300FA52E8 /* ireadTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB144E61E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadTests" */;
-			buildPhases = (
-				0EB144CB1E45FD3300FA52E8 /* Sources */,
-				0EB144CC1E45FD3300FA52E8 /* Frameworks */,
-				0EB144CD1E45FD3300FA52E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0EB144D11E45FD3300FA52E8 /* PBXTargetDependency */,
-			);
-			name = ireadTests;
-			productName = ireadTests;
-			productReference = 0EB144CF1E45FD3300FA52E8 /* ireadTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		0EB144D91E45FD3300FA52E8 /* ireadUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0EB144E91E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadUITests" */;
-			buildPhases = (
-				0EB144D61E45FD3300FA52E8 /* Sources */,
-				0EB144D71E45FD3300FA52E8 /* Frameworks */,
-				0EB144D81E45FD3300FA52E8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0EB144DC1E45FD3300FA52E8 /* PBXTargetDependency */,
-			);
-			name = ireadUITests;
-			productName = ireadUITests;
-			productReference = 0EB144DA1E45FD3300FA52E8 /* ireadUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -332,18 +259,6 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = EN86GVBDG6;
 						ProvisioningStyle = Automatic;
-					};
-					0EB144CE1E45FD3300FA52E8 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EN86GVBDG6;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0EB144B81E45FD3300FA52E8;
-					};
-					0EB144D91E45FD3300FA52E8 = {
-						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = EN86GVBDG6;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 0EB144B81E45FD3300FA52E8;
 					};
 				};
 			};
@@ -361,8 +276,6 @@
 			projectRoot = "";
 			targets = (
 				0EB144B81E45FD3300FA52E8 /* iread */,
-				0EB144CE1E45FD3300FA52E8 /* ireadTests */,
-				0EB144D91E45FD3300FA52E8 /* ireadUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,20 +287,6 @@
 			files = (
 				0EB144C91E45FD3300FA52E8 /* LaunchScreen.storyboard in Resources */,
 				0EB144C61E45FD3300FA52E8 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EB144CD1E45FD3300FA52E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EB144D81E45FD3300FA52E8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,36 +369,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0EB144CB1E45FD3300FA52E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EB144D41E45FD3300FA52E8 /* ireadTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0EB144D61E45FD3300FA52E8 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0EB144DF1E45FD3300FA52E8 /* ireadUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0EB144D11E45FD3300FA52E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0EB144B81E45FD3300FA52E8 /* iread */;
-			targetProxy = 0EB144D01E45FD3300FA52E8 /* PBXContainerItemProxy */;
-		};
-		0EB144DC1E45FD3300FA52E8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0EB144B81E45FD3300FA52E8 /* iread */;
-			targetProxy = 0EB144DB1E45FD3300FA52E8 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0EB144C71E45FD3300FA52E8 /* LaunchScreen.storyboard */ = {
@@ -636,64 +506,6 @@
 			};
 			name = Release;
 		};
-		0EB144E71E45FD3300FA52E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = EN86GVBDG6;
-				INFOPLIST_FILE = ireadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iread.app/iread";
-			};
-			name = Debug;
-		};
-		0EB144E81E45FD3300FA52E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = EN86GVBDG6;
-				INFOPLIST_FILE = ireadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iread.app/iread";
-			};
-			name = Release;
-		};
-		0EB144EA1E45FD3300FA52E8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = EN86GVBDG6;
-				INFOPLIST_FILE = ireadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = iread;
-			};
-			name = Debug;
-		};
-		0EB144EB1E45FD3300FA52E8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = EN86GVBDG6;
-				INFOPLIST_FILE = ireadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cc.ireadUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = iread;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -711,24 +523,6 @@
 			buildConfigurations = (
 				0EB144E41E45FD3300FA52E8 /* Debug */,
 				0EB144E51E45FD3300FA52E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0EB144E61E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0EB144E71E45FD3300FA52E8 /* Debug */,
-				0EB144E81E45FD3300FA52E8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0EB144E91E45FD3300FA52E8 /* Build configuration list for PBXNativeTarget "ireadUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0EB144EA1E45FD3300FA52E8 /* Debug */,
-				0EB144EB1E45FD3300FA52E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
