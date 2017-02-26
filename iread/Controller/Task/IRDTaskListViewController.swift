@@ -43,7 +43,7 @@ class IRDTaskListViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = self.dataSouce[indexPath.row]
-        let alert = UIAlertController(title: "每日复习", message: "确定完成复习任务", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: "确定完成复习任务", message: task.desc, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "已完成", style: UIAlertActionStyle.default, handler: { action in
             self.viewModel.finishTask(taskID: task.ID)
         }))
