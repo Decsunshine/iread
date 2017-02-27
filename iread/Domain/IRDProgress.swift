@@ -24,8 +24,12 @@ class IRDProgress: NSObject {
         if let startPage = dictionary["startPos"] as? String {
             self.startPage = startPage
         }
-        if let time = dictionary["readTime"] as? String {
-            self.time = time
+        if let time = dictionary["readTime"] as? NSArray {
+            if let year = time[0] as? Int,
+                let month = time[1] as? Int,
+                let day = time[2] as? Int {
+                self.time = "\(year)" + "-" + "\(month)" + "-" + "\(day)"
+            }
         }
     }
 }

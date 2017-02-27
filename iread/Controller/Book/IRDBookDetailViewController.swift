@@ -42,7 +42,7 @@ class IRDBookDeitalViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: BookDetialCellID, for: indexPath as IndexPath)
         let progress = (self.dataSouce[indexPath.row])
-        cell.textLabel?.text = "\(progress.startPage)" + "  =>  " + "\(progress.endPage)"
+        cell.textLabel?.text = "\(progress.time)" + "  " + "\(progress.startPage)" + "  =>  " + "\(progress.endPage)"
         return cell
     }
 
