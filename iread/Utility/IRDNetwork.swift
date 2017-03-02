@@ -49,7 +49,23 @@ class IRDNetwork: NSObject {
                 print(error)
                 completion(nil, error as NSError?)
             }
-            
+        }
+    }
+    
+    public func delete(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: NSDictionary?, _ error: NSError?) -> Void)  {
+        let URL = host + path
+        
+        Alamofire.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+            switch response.result {
+            case .success(let result):
+                print(result)
+                if let result = result as? Dictionary<String, Any> {
+                    completion(result as NSDictionary?, nil)
+                }
+            case .failure(let error):
+                print(error)
+                completion(nil, error as NSError?)
+            }
         }
     }
 }

@@ -7,14 +7,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class IRDAddBookViewModel: NSObject {
     let model = IRDBookModel.init()
+    var addBookSuccess = Variable(false)
     
     func addBook(bookName: String) -> Void {
         guard (bookName.characters.count > 0) else { return }
         self.model.addBook(name: bookName) { (error) in
             print(error ?? "success")
+            if (error != nil) {
+                self.addBookSuccess.value = true
+            } else {
+                self.addBookSuccess.value = false
+            }
         }
     }
 }

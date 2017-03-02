@@ -44,6 +44,10 @@ class IRDAddBookViewController: UIViewController {
     }
     
     func bindData() -> Void {
-        
+        _ = self.viewModel.addBookSuccess.asObservable().subscribe({ (n) in
+            if n.element! {
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+        })
     }
 }

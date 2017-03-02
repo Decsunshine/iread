@@ -49,7 +49,13 @@ class IRDBookDeitalViewController: UIViewController, UITableViewDataSource, UITa
     // MARK: table view delegate
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let progress = self.dataSouce[indexPath.row];
+        let alert = UIAlertController(title: "", message: "确认删除？", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "删除", style: UIAlertActionStyle.default, handler: { action in
+            self.viewModel.deleteProgress(progressID: progress.ID);
+        }))
+        alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: private
@@ -61,11 +67,14 @@ class IRDBookDeitalViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     func bindData() {
-        _ = self.viewModel.progressList.asObservable().filter({ (x) -> Bool in
-            return !x.isEmpty
-        }).subscribe({ (n) in
+        _ = self.viewModel.progressList.asObservable().subscribe({ (n) in
             self.dataSouce = (n.element as? [IRDProgress])!
             self.tableView.reloadData()
+        })
+        _ = self.viewModel.deleteSuccess.asObservable().subscribe({ (n) in
+            if n.element! {
+                self.viewModel.fetchProgressList()
+            }
         })
     }
     

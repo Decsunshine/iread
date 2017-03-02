@@ -15,6 +15,7 @@ class IRDAddBookProgressViewController: UIViewController {
     
     override func viewDidLoad() {
         self.setupUI()
+        self.bindData()
     }
     
     //MARK: private
@@ -51,5 +52,13 @@ class IRDAddBookProgressViewController: UIViewController {
                 self.viewModel.addBookProgress(startPage: startText, endPage: endText)
             }
         }
+    }
+    
+    func bindData() -> Void {
+        _ = self.viewModel.addBookProgressSuccess.asObservable().subscribe({ (n) in
+            if n.element! {
+                _ = self.navigationController?.popViewController(animated: true)
+            }
+        })
     }
 }

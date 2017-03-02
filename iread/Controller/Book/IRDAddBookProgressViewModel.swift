@@ -7,10 +7,12 @@
 //
 
 import Foundation
+import RxSwift
 
 class IRDAddBookProgressViewModel: NSObject {
     var book: IRDBook?
     let model = IRDBookModel.init()
+    var addBookProgressSuccess = Variable(false)
     
     func addBookProgress(startPage: String, endPage: String) -> Void {
         guard (startPage.characters.count > 0 || endPage.characters.count > 0) else { return }
@@ -18,6 +20,11 @@ class IRDAddBookProgressViewModel: NSObject {
             let bookID = book.ID
             self.model.addBookProgress(startPage: startPage, endPage: endPage, bookID: bookID) { (error) in
                 print(error ?? "success")
+                if (error != nil) {
+                    self.addBookProgressSuccess.value = false
+                } else {
+                    self.addBookProgressSuccess.value = true
+                }
             }
         }
     }

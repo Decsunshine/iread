@@ -101,4 +101,13 @@ class IRDBookModel: IRDBaseModel {
             })
         }
     }
+    
+    func deleteProgress(progressID: String, completion: @escaping (_ error: NSError?) -> Void) -> Void {
+        network.delete(path: "/bookitems/" + progressID,
+                       params: [:],
+                       completion: { (_ data, _ error: NSError?) -> Void in
+                        completion(error)
+        })
+        
+    }
 }

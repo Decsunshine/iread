@@ -14,6 +14,7 @@ class IRDBookDetailViewModel: NSObject {
     
     var book: IRDBook?
     var progressList = Variable([])
+    var deleteSuccess = Variable(false)
     
     var pageNumber = "0"
     var pageSize = "20"
@@ -26,6 +27,12 @@ class IRDBookDetailViewModel: NSObject {
             if let list = list {
                 self.progressList.value = list
             }
+        }
+    }
+    
+    func deleteProgress(progressID: String) -> Void {
+        model.deleteProgress(progressID: progressID) { (error) in
+            self.deleteSuccess.value = true
         }
     }
 
