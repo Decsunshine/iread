@@ -70,9 +70,7 @@ class IRDTaskListViewController: UIViewController, UITableViewDataSource, UITabl
                 self.viewModel.fetchTaskList()
             }
         })
-        _ = self.viewModel.taskList.asObservable().filter({ (x) -> Bool in
-            return !x.isEmpty
-        }).subscribe({ (n) in
+        _ = self.viewModel.taskList.asObservable().subscribe({ (n) in
             if let taskList = n.element as? [IRDTask] {
                 self.dataSouce = taskList
             }
