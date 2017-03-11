@@ -8,11 +8,12 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class IRDNetwork: NSObject {
     let host = "http://43.241.215.199:3333"
     
-    public func get(path: String, params: Dictionary<String, String>, completion:@escaping (_ data: Dictionary<String, Any>?, _ error: NSError?) -> Void) {
+    public func get(path: String, params: Dictionary<String, String>, completion:@escaping (_ data: JSON, _ error: NSError?) -> Void) {
         
         var tmpPath = path
         if !params.isEmpty {
@@ -25,46 +26,38 @@ class IRDNetwork: NSObject {
         Alamofire.request(URL, method: .get).responseJSON { (response) in
             switch response.result {
             case .success(let result):
-                if let result = result as? Dictionary<String, Any> {
-                    completion(result, nil)
-                }
+                let result = JSON(result)
+                completion(result, nil)
             case .failure(let error):
-                completion(nil, error as NSError?)
+                completion(JSON.null, error as NSError?)
             }
-            
         }
     }
     
-    public func post(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: NSDictionary?, _ error: NSError?) -> Void)  {
+    public func post(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: JSON?, _ error: NSError?) -> Void)  {
         let URL = host + path
         
         Alamofire.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success(let result):
-                print(result)
-                if let result = result as? Dictionary<String, Any> {
-                    completion(result as NSDictionary?, nil)
-                }
+                let result = JSON(result)
+                completion(result, nil)
             case .failure(let error):
-                print(error)
-                completion(nil, error as NSError?)
+                completion(JSON.null, error as NSError?)
             }
         }
     }
     
-    public func delete(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: NSDictionary?, _ error: NSError?) -> Void)  {
+    public func delete(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: JSON?, _ error: NSError?) -> Void)  {
         let URL = host + path
         
         Alamofire.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success(let result):
-                print(result)
-                if let result = result as? Dictionary<String, Any> {
-                    completion(result as NSDictionary?, nil)
-                }
+                let result = JSON(result)
+                completion(result, nil)
             case .failure(let error):
-                print(error)
-                completion(nil, error as NSError?)
+                completion(JSON.null, error as NSError?)
             }
         }
     }

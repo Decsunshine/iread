@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 // Swift 本该更简洁、更具描述力
 
@@ -16,22 +17,22 @@ class IRDBookModel: IRDBaseModel {
     func bookList(pageNumber: String, pageSize: String, completion:@escaping (_ data: Array<IRDBook>?, _ bookNumber: String, _ bookSize: String, _ error: NSError?) -> Void) -> Void {
         network.get(path: "/user/" + userID + "/books",
                     params: ["pageNum": pageNumber, "pageSize": pageSize],
-                    completion: { (_ data: Dictionary?, _ error: NSError?) -> Void in
+                    completion: { (_ data: JSON?, _ error: NSError?) -> Void in
                         if (error != nil) {
                             completion(nil, "", "", error)
                         } else {
                             var pageNumber: String = ""
                             var pageSize: String = ""
-                            if let number = data?["pageNum"] as? Int {
+                            if let number = data?["pageNum"].int {
                                 pageNumber = String(number)
                             }
-                            if let size = data?["pageSize"] as? Int {
+                            if let size = data?["pageSize"].int {
                                 pageSize = String(size)
                             }
                             var bookList = [IRDBook]()
-                            if let list = data?["list"] as? Array<AnyObject> {
+                            if let list = data?["list"].array {
                                 for item in list.enumerated() {
-                                    if let dic = item.1 as? Dictionary<String, AnyObject> {
+                                    if let dic = item.element.dictionary {
                                         let book = IRDBook.init()
                                         book.transferFromDic(dictionary: dic)
                                         bookList.insert(book, at: item.0)
@@ -57,22 +58,22 @@ class IRDBookModel: IRDBaseModel {
         guard let bookID = bookID else { return }
         network.get(path: "/book/" + bookID + "/bookitems",
                     params: ["pageNum": pageNumber, "pageSize": pageSize],
-                    completion: { (_ data: Dictionary?, _ error: NSError?) -> Void in
+                    completion: { (_ data: JSON?, _ error: NSError?) -> Void in
                         if (error != nil) {
                             completion(nil, "", "", error)
                         } else {
                             var pageNumber = ""
                             var pageSize = ""
-                            if let number = data?["pageNum"] as? Int {
+                            if let number = data?["pageNum"].int {
                                 pageNumber = String(number)
                             }
-                            if let size = data?["pageSize"] as? Int {
+                            if let size = data?["pageSize"].int {
                                 pageSize = String(size)
                             }
                             var progressList = [IRDProgress]()
-                            if let list = data?["list"] as? Array<AnyObject> {
+                            if let list = data?["list"].array {
                                 for item in list.enumerated() {
-                                    if let dic = item.1 as? Dictionary<String, AnyObject> {
+                                    if let dic = item.element.dictionary {
                                         let progress = IRDProgress.init()
                                         progress.transferFromDic(dictionary: dic)
                                         progressList.insert(progress, at: item.0)

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class IRDProgress: NSObject {
     var ID: String = ""
@@ -14,20 +15,20 @@ class IRDProgress: NSObject {
     var endPage: String = ""
     var time: String = ""
     
-    public func transferFromDic(dictionary : Dictionary<String, Any>) -> Void {
-        if let ID = dictionary["bookItemId"] as? Int {
+    public func transferFromDic(dictionary : [String: JSON]) -> Void {
+        if let ID = dictionary["bookItemId"]?.int {
             self.ID = "\(ID)"
         }
-        if let endPage = dictionary["endPos"] as? String {
+        if let endPage = dictionary["endPos"]?.string {
             self.endPage = endPage
         }
-        if let startPage = dictionary["startPos"] as? String {
+        if let startPage = dictionary["startPos"]?.string {
             self.startPage = startPage
         }
-        if let time = dictionary["readTime"] as? NSArray {
-            if let year = time[0] as? Int,
-                let month = time[1] as? Int,
-                let day = time[2] as? Int {
+        if let time = dictionary["readTime"]?.array {
+            if let year = time[0].int,
+                let month = time[1].int,
+                let day = time[2].int {
                 self.time = "\(year)" + "-" + "\(month)" + "-" + "\(day)"
             }
         }

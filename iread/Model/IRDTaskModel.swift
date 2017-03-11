@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class IRDTaskModel: IRDBaseModel {
     let userID = IRDEnvironment.shareInstance.user.ID
@@ -14,22 +15,22 @@ class IRDTaskModel: IRDBaseModel {
     func taskList(pageNumber: String, pageSize: String, completion:@escaping (_ data: Array<IRDTask>?, _ bookNumber: String, _ bookSize: String, _ error: NSError?) -> Void) -> Void {
         network.get(path: "/user/" + userID + "/tasks/today",
                     params: ["pageNum": pageNumber, "pageSize": pageSize],
-                    completion: { (_ data: Dictionary?, _ error: NSError?) -> Void in
+                    completion: { (_ data: JSON?, _ error: NSError?) -> Void in
                         if (error != nil) {
                             completion(nil, "", "", error)
                         } else {
                             var pageNumber = ""
                             var pageSize = ""
-                            if let number = data?["pageNum"] as? Int {
+                            if let number = data?["pageNum"].int {
                                 pageNumber = String(number)
                             }
-                            if let size = data?["pageSize"] as? Int {
+                            if let size = data?["pageSize"].int {
                                 pageSize = String(size)
                             }
                             var taskList = [IRDTask]()
-                            if let list = data?["list"] as? Array<AnyObject> {
+                            if let list = data?["list"].array {
                                 for item in list.enumerated() {
-                                    if let dic = item.1 as? Dictionary<String, AnyObject> {
+                                    if let dic = item.element.dictionary {
                                         let progress = IRDTask.init()
                                         progress.transferFromDic(dictionary: dic)
                                         taskList.insert(progress, at: item.0)

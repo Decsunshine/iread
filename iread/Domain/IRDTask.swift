@@ -7,30 +7,31 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class IRDTask: NSObject {
     var ID: String = ""
     var reviewDate: String = ""
     var desc: String = ""
     
-    public func transferFromDic(dictionary : Dictionary<String, Any>) -> Void {
-        if let ID = dictionary["taskId"] as? Int {
+    public func transferFromDic(dictionary : [String: JSON]) -> Void {
+        if let ID = dictionary["taskId"]?.int {
             self.ID = "\(ID)"
         }
         
-        if let reviewDate = dictionary["mayReviewDate"] as? String {
+        if let reviewDate = dictionary["mayReviewDate"]?.string {
             self.reviewDate = reviewDate
         }
-        if let bookItem = dictionary["ponBookItem"] as? NSDictionary,
-            let status = dictionary["taskStatus"] as? String{
-            if let book = bookItem["ponBook"] as? NSDictionary,
-                let startPage = bookItem["startPos"] as? String,
-                let endPage = bookItem["endPos"] as? String,
-                let readTimeDic = bookItem["readTime"] as? NSArray {
-                if let name = book["name"] as? String,
-                    let year = readTimeDic[0] as? Int,
-                    let month = readTimeDic[1] as? Int,
-                    let day = readTimeDic[2] as? Int{
+        if let bookItem = dictionary["ponBookItem"]?.dictionary,
+            let status = dictionary["taskStatus"]?.string{
+            if let book = bookItem["ponBook"]?.dictionary,
+                let startPage = bookItem["startPos"]?.string,
+                let endPage = bookItem["endPos"]?.string,
+                let readTimeDic = bookItem["readTime"]?.array {
+                if let name = book["name"]?.string,
+                    let year = readTimeDic[0].int,
+                    let month = readTimeDic[1].int,
+                    let day = readTimeDic[2].int{
                     desc = "\(year)" + "-" + "\(month)" + "-" + "\(day)" + " 《" + name + "》 " + startPage + "页 => " + endPage + "页  " + status
                 }
             }
