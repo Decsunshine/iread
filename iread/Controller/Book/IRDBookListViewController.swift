@@ -47,10 +47,10 @@ class IRDBookListViewController: UIViewController, UITableViewDataSource, UITabl
     func setupUI() {
         self.title = "bookList"
         
-        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addBook))
+        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addBook))
         self.navigationItem.setRightBarButton(item, animated: true)
         
-        tableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
+        tableView = UITableView(frame: view.bounds, style: UITableView.Style.plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: bookListCellID)
         
         tableView.dataSource = self
@@ -61,7 +61,7 @@ class IRDBookListViewController: UIViewController, UITableViewDataSource, UITabl
     
     //MARK: private
     
-    func addBook() {
+    @objc func addBook() {
         let addBookViewController = IRDAddBookViewController.init()
         self.navigationController?.pushViewController(addBookViewController, animated: true)
     }
@@ -81,11 +81,11 @@ class IRDBookListViewController: UIViewController, UITableViewDataSource, UITabl
     
     //MARK: tableView Delegate
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle,
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             dataSouce.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
         }
     }
     

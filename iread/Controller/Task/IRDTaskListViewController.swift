@@ -43,11 +43,11 @@ class IRDTaskListViewController: UIViewController, UITableViewDataSource, UITabl
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let task = self.dataSouce[indexPath.row]
-        let alert = UIAlertController(title: "确定完成复习任务", message: task.desc, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "已完成", style: UIAlertActionStyle.default, handler: { action in
+        let alert = UIAlertController(title: "确定完成复习任务", message: task.desc, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "已完成", style: UIAlertAction.Style.default, handler: { action in
             self.viewModel.finishTask(taskID: task.ID)
         }))
-        alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -57,7 +57,7 @@ class IRDTaskListViewController: UIViewController, UITableViewDataSource, UITabl
         self.title = "taskList"
         self.view.backgroundColor = UIColor.white
         
-        tableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
+        tableView = UITableView(frame: view.bounds, style: UITableView.Style.plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: taskListCellID)
         tableView.dataSource = self
         tableView.delegate = self;

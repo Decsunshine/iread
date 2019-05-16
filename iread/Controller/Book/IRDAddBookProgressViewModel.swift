@@ -15,7 +15,7 @@ class IRDAddBookProgressViewModel: NSObject {
     var addBookProgressSuccess = Variable(false)
     
     func addBookProgress(startPage: String, endPage: String) -> Void {
-        guard (startPage.characters.count > 0 || endPage.characters.count > 0) else { return }
+        guard (startPage.count > 0 || endPage.count > 0) else { return }
         if let book = self.book {
             let bookID = book.ID
             self.model.addBookProgress(startPage: startPage, endPage: endPage, bookID: bookID) { (error) in

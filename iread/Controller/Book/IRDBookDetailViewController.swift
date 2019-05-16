@@ -50,17 +50,17 @@ class IRDBookDeitalViewController: UIViewController, UITableViewDataSource, UITa
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let progress = self.dataSouce[indexPath.row];
-        let alert = UIAlertController(title: "", message: "确认删除？", preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "删除", style: UIAlertActionStyle.default, handler: { action in
+        let alert = UIAlertController(title: "", message: "确认删除？", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "删除", style: UIAlertAction.Style.default, handler: { action in
             self.viewModel.deleteProgress(progressID: progress.ID);
         }))
-        alert.addAction(UIAlertAction(title: "取消", style: UIAlertActionStyle.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "取消", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: private
     
-    func addReadingProgress() -> Void {
+    @objc func addReadingProgress() -> Void {
         let addReadingProgressViewController = IRDAddBookProgressViewController.init()
         addReadingProgressViewController.viewModel.book = self.book
         self.navigationController?.pushViewController(addReadingProgressViewController, animated: true)
@@ -81,10 +81,10 @@ class IRDBookDeitalViewController: UIViewController, UITableViewDataSource, UITa
     func setupUI() {
         self.title = (self.book.name)
         
-        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(addReadingProgress))
+        let item = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addReadingProgress))
         self.navigationItem.setRightBarButton(item, animated: true)
         
-        tableView = UITableView(frame: view.bounds, style: UITableViewStyle.plain)
+        tableView = UITableView(frame: view.bounds, style: UITableView.Style.plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: BookDetialCellID)
         tableView.dataSource = self
         tableView.delegate = self;

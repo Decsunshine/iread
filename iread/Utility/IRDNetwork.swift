@@ -23,7 +23,7 @@ class IRDNetwork: NSObject {
             }
         }
         let URL = host + tmpPath
-        Alamofire.request(URL, method: .get).responseJSON { (response) in
+        AF.request(URL, method: .get).responseJSON { (response) in
             switch response.result {
             case .success(let result):
                 let result = JSON(result)
@@ -37,7 +37,7 @@ class IRDNetwork: NSObject {
     public func post(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: JSON?, _ error: NSError?) -> Void)  {
         let URL = host + path
         
-        Alamofire.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+        AF.request(URL, method: .post, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success(let result):
                 let result = JSON(result)
@@ -51,7 +51,7 @@ class IRDNetwork: NSObject {
     public func delete(path: String, params: Dictionary<String, Any>, completion:@escaping (_ data: JSON?, _ error: NSError?) -> Void)  {
         let URL = host + path
         
-        Alamofire.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
+        AF.request(URL, method: .delete, parameters: params, encoding: JSONEncoding.default).responseJSON { (response) in
             switch response.result {
             case .success(let result):
                 let result = JSON(result)

@@ -39,14 +39,14 @@ class IRDAddBookProgressViewController: UIViewController {
         self.endTextField?.backgroundColor = UIColor.lightGray
         self.view.addSubview(self.endTextField!);
         
-        let button = UIButton.init(type: UIButtonType.system)
+        let button = UIButton.init(type: UIButton.ButtonType.system)
         button.frame = CGRect(x: (SCRREN_MIDDLE - (80 / 2)), y: 180, width: 80, height: 20)
-        button.setTitle("提交", for: UIControlState.normal)
-        button.addTarget(self, action: #selector(click), for: UIControlEvents.touchUpInside)
+        button.setTitle("提交", for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(click), for: UIControl.Event.touchUpInside)
         self.view.addSubview(button)
     }
     
-    func click() -> Void {
+    @objc func click() -> Void {
         if let startText = self.startTextField?.text {
             if let endText = self.endTextField?.text {
                 self.viewModel.addBookProgress(startPage: startText, endPage: endText)

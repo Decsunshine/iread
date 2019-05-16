@@ -32,14 +32,14 @@ class IRDAddBookViewController: UIViewController {
         self.textField.backgroundColor = UIColor.lightGray
         self.view.addSubview(self.textField)
         
-        let button = UIButton.init(type: UIButtonType.system)
+        let button = UIButton.init(type: UIButton.ButtonType.system)
         button.frame = CGRect(x: (SCRREN_MIDDLE - (80 / 2)), y: 120, width: 80, height: 20)
-        button.setTitle("提交", for: UIControlState.normal)
-        button.addTarget(self, action: #selector(click), for: UIControlEvents.touchUpInside)
+        button.setTitle("提交", for: UIControl.State.normal)
+        button.addTarget(self, action: #selector(click), for: UIControl.Event.touchUpInside)
         self.view.addSubview(button)
     }
     
-    func click() -> Void {
+    @objc func click() -> Void {
         self.viewModel.addBook(bookName: self.textField.text!)
     }
     
